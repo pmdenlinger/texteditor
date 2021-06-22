@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var editorText = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TextEditor(text: $editorText)
+//        Frame for box editor
+        .frame(height: 200)
+            .accentColor(.blue)
     }
 }
 
